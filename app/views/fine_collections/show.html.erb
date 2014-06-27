@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fine amount:</strong>
+  <%= @fine_collection.fine_amount %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @fine_collection.due_date %>
+</p>
+
+<p>
+  <strong>Return date:</strong>
+  <%= @fine_collection.return_date %>
+</p>
+
+<%= link_to 'Edit', edit_fine_collection_path(@fine_collection) %> |
+<%= link_to 'Back', fine_collections_path %>

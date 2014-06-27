@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fine_amount: 9.99
+  due_date: 2014-06-26 15:09:48
+  return_date: 2014-06-26 15:09:48
+
+two:
+  fine_amount: 9.99
+  due_date: 2014-06-26 15:09:48
+  return_date: 2014-06-26 15:09:48

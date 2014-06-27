@@ -1,0 +1,29 @@
+<%= form_for(@fine_collection) do |f| %>
+  <% if @fine_collection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fine_collection.errors.count, "error") %> prohibited this fine_collection from being saved:</h2>
+
+      <ul>
+      <% @fine_collection.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fine_amount %><br>
+    <%= f.text_field :fine_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :due_date %><br>
+    <%= f.datetime_select :due_date %>
+  </div>
+  <div class="field">
+    <%= f.label :return_date %><br>
+    <%= f.datetime_select :return_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

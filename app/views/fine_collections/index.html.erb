@@ -1,0 +1,31 @@
+<h1>Listing fine_collections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fine amount</th>
+      <th>Due date</th>
+      <th>Return date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fine_collections.each do |fine_collection| %>
+      <tr>
+        <td><%= fine_collection.fine_amount %></td>
+        <td><%= fine_collection.due_date %></td>
+        <td><%= fine_collection.return_date %></td>
+        <td><%= link_to 'Show', fine_collection %></td>
+        <td><%= link_to 'Edit', edit_fine_collection_path(fine_collection) %></td>
+        <td><%= link_to 'Destroy', fine_collection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fine collection', new_fine_collection_path %>
